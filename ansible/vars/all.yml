@@ -6,7 +6,7 @@ server:
     locale: es_ES.UTF-8
 vagrant_local:
     install: '1'
-    vm: { base_box: trusty64, hostname: testing-with-symfony, ip: 10.0.0.111, memory: '1024', sharedfolder: ./, useVagrantCloud: '1', syncType: nfs }
+    vm: { base_box: trusty64, hostname: testing-with-symfony, ip: 10.0.0.110, memory: '1024', sharedfolder: ./, useVagrantCloud: '1', syncType: nfs }
 nginx:
     install: '1'
     docroot: /vagrant/web
@@ -25,4 +25,3 @@ php:
     ppa: php
     packages: [php5.6, php5.6-cli, php5.6-intl, php5.6-mcrypt, php5.6-common, php5.6-fpm, php5.6-mysql, php5.6-sqlite3, php5.6-curl, php5.6-xdebug, php5.6-xml]
     peclpackages: [sqlite3, json]
-
