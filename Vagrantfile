@@ -25,7 +25,7 @@ end
 Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |v|
-        v.name = "testing-with-symfony"
+        v.name = "tdd-katas-course"
         v.customize [
             "modifyvm", :id,
             "--name", "testing-with-symfony",
