@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
         v.name = "tdd-katas-course"
         v.customize [
             "modifyvm", :id,
-            "--name", "testing-with-symfony",
+            "--name", "tdd-katas-course",
             "--memory", 1024,
             "--natdnshostresolver1", "on",
             "--cpus", 1,
@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
             ansible.limit = 'all'
         end
     else
-        config.vm.provision :shell, path: "ansible/windows.sh", args: ["testing-with-symfony"]
+        config.vm.provision :shell, path: "ansible/windows.sh", args: ["tdd-katas-course"]
     end
 
     config.vm.synced_folder "./", "/vagrant", type: "nfs"
